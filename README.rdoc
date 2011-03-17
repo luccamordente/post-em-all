@@ -16,7 +16,6 @@ the block will be evaluated within helper scope
 
 == Fallbacks
 
-* external absolute links must be written as html
 * it isn't possible to use same route path for both GET and POST with match
 
 == Contributing to post-em-all
