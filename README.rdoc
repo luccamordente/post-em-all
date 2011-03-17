@@ -1,6 +1,23 @@
 = post-em-all
 
-Description goes here.
+requisições get devem ser post
+devem continuar respondendo para a mesma action
+
+== Usage
+
+=== config
+* add the following line to the end of your application.rb file
+PostEmAll::Post.when { condition? }
+the block will be evaluated within helper scope
+
+=== links
+* link_to does the work
+* to prevent get requests to do a post, pass the :post => false option
+
+== Fallbacks
+
+* external absolute links must be written as html
+* it isn't possible to use same route path for both GET and POST with match
 
 == Contributing to post-em-all
  

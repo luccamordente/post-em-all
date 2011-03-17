@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "post-em-all"
   gem.homepage = "http://github.com/luccamordente/post-em-all"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{All GET requests as POST}
+  gem.description = %Q{Make all GET requests respond to POST request in 'get' scope}
   gem.email = "luccamordente@gmail.com"
   gem.authors = ["Lucca Mordente"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
