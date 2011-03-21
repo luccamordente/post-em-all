@@ -72,6 +72,7 @@ module PostEmAll
         name         = args[0]
         options      = args[1] || {}
         html_options = args[2] || {}
+        
         prevent_post = html_options.delete(:post)===false
         if !prevent_post && post?
           is_get = html_options.empty? || !html_options.keys.include?(:method) || html_options[:method] == :get
@@ -105,7 +106,7 @@ module PostEmAll
     private
     
     def post?
-      instance_exec(&PostEmAll::Post.post?)
+      (block = PostEmAll::Post.post?).is_a?(Proc) ? instance_exec(&PostEmAll::Post.post?) : true
     end
     
   end  
