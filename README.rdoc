@@ -9,8 +9,10 @@ Feel free to open an issue or make pull request.
 
 == Usage
 
+To automaticaly convert GET to POST you must use the <tt>link_to</tt> helper.
+
 === config
-* add the following line to the end of your application.rb file
+Add the following line (not required) to the end of your application.rb file to add a condition to convert the GET requests
   PostEmAll::Post.when { condition? }
 the block will be evaluated within helper scope
 
@@ -21,6 +23,7 @@ the block will be evaluated within helper scope
 == Drawbacks
 
 * it isn't possible to use same route path for both GET and POST with <tt>match</tt>
+* if post-em-all can not convert a request, you might do this manually by placing 'get/' at the beginning of the url (make sure to set the request as POST)
 
 == Compatibility
 
